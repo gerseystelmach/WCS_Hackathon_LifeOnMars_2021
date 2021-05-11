@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/discover.css">
+{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		<h1>DISCOVER MARS</h1>
+		<section class="planet_mars d-flex flex-column">
+			<img src="https://images.unsplash.com/photo-1532779007449-43cd38f80988?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="planet_mars">
+			<p class="my-5 text-justify">The planet Mars is the best place to live your second life Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</p>
+		</section>
+		<section class="latest_news">
+			<h2>Lastet News</h2>
+			<div class="d-flex justify-content-around">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-group">
+					{% for new in news %}
+						<div class="col">
+							<div class="card m-3">
+								<div class="card_discover">
+									<img class="card-img-top" src="{{new.imageUrl}}" width="400px" height="300px" alt="Life on mars">
+									<div class="card-body">
+										<h3 class="card-title">{{new.title}}</h3>
+										<p class="card-text">{{new.summary}}</p>
+                                        <p class="card-text"><small class="text-muted">published at : {{new.publishedAt|date("m/d/Y")}}</small></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+            </div>
+		</section>
+	</div>
+{% endblock %}
