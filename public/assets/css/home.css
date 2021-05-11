@@ -1,0 +1,42 @@
+.hero-image {
+    color: var(--white-color);
+    background-image: url("/assets/images/mars3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.hero-image h1 {
+
+    color: var(--light-color);
+    text-transform: uppercase;
+    font-family: var(--title-font);
+
+
+}
+
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+    margin-bottom: 150px;
+}
+
+.scrollDown {
+
+    margin-top: 100px;
+
+}
+
+.scrollDown p {
+    font-size: 1em;
+    margin: 20px auto;
+}
