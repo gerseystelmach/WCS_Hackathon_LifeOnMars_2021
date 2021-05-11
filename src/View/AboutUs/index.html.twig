@@ -1,0 +1,144 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/aboutUs.css">
+{% endblock %}
+
+{% block content %}
+<section class="aboutUs container text-center">
+    <h2 class="text-center">
+        ABOUT US
+    </h2>
+    <div class="card mb-3 bg-darkbrown">
+        <div class="row g-0 border-2 rounded">
+            <div class="col-md-4 ">
+                <div class="photo-percy">
+                    <img src="../assets/images/photoAlien1.png" alt="alien" class="alien rounded-circle"
+                        width="300px" />
+                </div>
+                <div class="photo-owner text-center">
+                    <h3 class="card-title mt-3 text-light">Percy</h3>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+
+                    <p class="card-text text-light mt-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, perspiciatis doloremque
+                        voluptatibus aliquam deleniti fuga dolorem, nisi omnis perferendis reiciendis placeat beatae
+                        sit numquam, quasi maxime itaque illo neque veritatis?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3 bg-darkbrown">
+        <div class="row g-0">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text text-light mt-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, perspiciatis doloremque
+                        voluptatibus aliquam deleniti fuga dolorem, nisi omnis perferendis reiciendis placeat beatae
+                        sit numquam, quasi maxime itaque illo neque veritatis?
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="photo-ginny">
+                    <img src="../assets/images/photoAlien2.jpeg" alt="alien" class="alien rounded-circle"
+                        width="300px" />
+                </div>
+                <div class="photo-owner text-center">
+                    <h3 class="card-title mt-3 text-light">Ginny</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-photo container">
+    <h2 class="text-center my-5">
+        OUR FUN LIFE ON MARS
+    </h2>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/alienlife1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/alienlife2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/alienlife3.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="contactUs container my-5">
+    <h2 class="text-center my-5">
+        CONTACT US
+    </h2>
+
+    {# Show the errors #}
+    {% if errors is not empty %}
+    <ul class="error alert container text-center mb-3">
+        {% for error in errors %}
+        <li class="list-unstyled"> {{ error }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {# Showing the errors ends here #}
+
+    <form method="post" action="" novalidate>
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="firstname">First name</label>
+            <div class="col-md-9 col-12">
+                <input class="form-control " type="text" id="firstname" name="firstname" placeholder="Your first name"
+                    value="{{ client.firstname }}" required />
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="lastname">Last name</label>
+            <div class="col-md-9 col-12">
+                <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Your last name"
+                    value="{{ client.lastname }}" required />
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label for="email" class="col-md-3 col-12 col-form-label text-light">Email</label>
+            <div class="col-md-9 col-12">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                    value="{{ client.email }}" required />
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="message">Message</label>
+            <div class="col-md-9 col-12">
+                <textarea class="form-control" id="message" rows="5" name="message"
+                    placeholder="Write your message here" required>{{ client.message }}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label"></label>
+            <div class="col-md-9 col-12">
+                <button type="submit" class="btn text-dark bg-light col-md-2 col-4">
+                    Send
+                </button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
