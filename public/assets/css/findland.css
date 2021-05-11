@@ -1,4 +1,4 @@
-p {
+.intro {
     color: var(--secondary-color);
 }
 
@@ -6,13 +6,23 @@ p {
     color: var(--primary-color);
 }
 
+.btn{
+    cursor: pointer;
+}
+
 .btn-comfort, .btn-comfort:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color:  var(--secondary-color);
+    cursor: pointer;
+}
+
+.btn-success{
+    cursor: pointer;
 }
 
 .btn-luxury{
     background-color: var(--element-color);
     border-color: var(--element-color);
+    cursor: pointer;
 }
