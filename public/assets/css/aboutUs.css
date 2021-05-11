@@ -10,9 +10,13 @@
     max-width:100%;
     height:500px;
     object-fit: cover;
-
 }
 
-.error{
-    color:var(--element-color);
+h5{
+    font-size:30px;
+    color: var(--element-color);
+}
+
+p{
+    color: var(--white-color);
 }
