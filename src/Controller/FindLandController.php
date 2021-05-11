@@ -27,6 +27,7 @@ class FindLandController extends AbstractController
             'GET',
             'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=' . APP_KEY
         );
+        // TODO: change link to get more content
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
@@ -37,8 +38,16 @@ class FindLandController extends AbstractController
             // convert the response (here in JSON) to an PHP array
         }
 
-        //var_dump($photos['photos']);
-
         return $this->twig->render('FindLand/index.html.twig', ['photos' => $photos['photos']]);
+    }
+
+    public function sqft(): int
+    {
+        return random_int(100, 1000);
+    }
+
+    public function price(): int
+    {
+        return $this->sqft() * 100;
     }
 }
