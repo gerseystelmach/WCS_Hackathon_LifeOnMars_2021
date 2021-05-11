@@ -19,33 +19,33 @@
             <p>{{plan.price}}</p>
         {% endfor %}#}
 
+        {#}{% for i in 0..10 %}
+            {{i}}
+        {% endfor %}#}
 
-        <div class = "card-group d-flex flex-column">
-            {% for plan in constant('App\\Controller\\FindLandController::PLANS') %}
-                <div class="card d-flex flex-row">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for photo in photos %}
+        <div class="col">
+            <div class="card d-flex flex-row">
+                <img src="{{photo.img_src}}" class="card-img-top ratio ratio-1x1" alt="plot of land">
 
-                    {# change image source to photo from api #}
-                    <img src="{{photos.0.img_src}}" class="card-img-top" alt="mars">
 
-                    <div class>
-                        <div class="card-body">
-                            <h2 class="card-title">{{plan.name}}</h2>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
+                <div class="card-body">
+                    <p class="card-title">REF:{{photo.id}}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Sqft:
+                        </li>
+                        <li class="list-group-item">Price: £</li>
+                        <li class="list-group-item">Region: </li>
+
+                    </ul>
+                    <a class="btn btn-primary" href="#" role="button">Add to cart</a>
                 </div>
-            {# ENDFOR #}
-            {% endfor %}
+            </div>
         </div>
+    {% endfor %}
+</div>
+
 
     </main>
 {% endblock %}
