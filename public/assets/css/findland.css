@@ -1,3 +1,18 @@
-.h2 {
+p {
+    color: var(--secondary-color);
+}
+
+.card-title{
     color: var(--primary-color);
+}
+
+.btn-comfort, .btn-comfort:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color:  var(--secondary-color);
+}
+
+.btn-luxury{
+    background-color: var(--element-color);
+    border-color: var(--element-color);
 }

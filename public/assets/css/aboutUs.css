@@ -19,4 +19,9 @@ h5{
 
 p{
     color: var(--white-color);
+
+}
+
+.error{
+    color:var(--element-color);
 }

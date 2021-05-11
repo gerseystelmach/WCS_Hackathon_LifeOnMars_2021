@@ -1,5 +1,127 @@
 {% extends 'layout.html.twig' %}
-
-{% block content %}
-    <h1>Hello Wilder !</h1>
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/home.css">
 {% endblock %}
+{% block content %}
+	<main>
+
+		<div class="hero-image p-0">
+			<div class="hero-text">
+				<h1 class="display-5 mt-5-xl">Invest in the future on mars</h1>
+				<p class="lead">“Explore as One”</p>
+				<span class="fw-bold">Perseverance Mars Rover</span>
+				<div class="scrollDown">
+					<a href="#findyourland">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewbox="0 0 172 172" style=" fill:#000000;">
+							<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+								<path d="M0,172v-172h172v172z" fill="none"></path>
+								<g>
+									<path d="M2.65391,86c0,-46.02344 37.32266,-83.34609 83.34609,-83.34609c46.02344,0 83.34609,37.32266 83.34609,83.34609c0,46.02344 -37.32266,83.34609 -83.34609,83.34609c-46.02344,0 -83.34609,-37.32266 -83.34609,-83.34609z" fill="#cccccc"></path>
+									<path d="M119.29141,66.28047c-10.27969,10.27969 -20.55938,20.59297 -30.87266,30.87266c-10.31328,-10.31328 -20.62656,-20.62656 -30.93984,-30.93984c-9.00313,-9.00313 -22.91094,5.00547 -13.87422,14.04219c12.63125,12.63125 25.2625,25.2625 37.89375,37.89375c3.82969,3.82969 10.17891,3.72891 13.94141,-0.06719c12.63125,-12.63125 25.2625,-25.2625 37.89375,-37.89375c8.96953,-9.03672 -5.03906,-22.94453 -14.04219,-13.90781z" fill="#ffffff"></path>
+								</g>
+							</g>
+						</svg>
+					</a>
+					<p class="scrollTitle">Scroll Down</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<section id="findyourland">
+		<h1>Find your Land</h1>
+		<div class="container">
+			<div class="d-flex justify-content-lg-between flex-lg-row align-items-lg-center flex-column px-lg-5 mb-lg-5 mb-3">
+
+
+				<div class="card m-3">
+					<img class="card-img-top" src="{{nasaImages.60.img_src}}" alt="Card image cap">
+					<div class="card-body">
+
+						<p class="card-text">Good option for those who want to build a new family in Mars. Watch your kids born and grow in Mars!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item valueLabel fw-bold">Value land</li>
+						<li class="list-group-item">less than 300 sqfts</li>
+						<li class="list-group-item">less than $45.000</li>
+					</ul>
+
+				</div>
+
+				<div class="card m-3">
+					<img class="card-img-top h-50" src="{{nasaImages.10.img_src}}" alt="Card image cap">
+					<div class="card-body">
+
+						<p class="card-text">This is for those who want to live a luxury life in Mars. Discover the new Hamptons!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item luxuryLabel fw-bold">
+							Luxury land</li>
+						<li class="list-group-item">more than 800 sqft</li>
+
+						<li class="list-group-item ">starting from $120.000</li>
+					</ul>
+
+				</div>
+
+				<div class="card  m-3">
+					<img class="card-img-top" src="{{nasaImages.150.img_src}}" alt="Card image cap">
+					<div class="card-body">
+
+						<p class="card-text">The best cost benefit for those who want to live in Mars with comfort! Come with all your close family!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item comfortLabel fw-bold">Comfort land</li>
+						<li class="list-group-item">300 sqft ~ 800 sqft</li>
+
+						<li class="list-group-item ">$ 45.000 ~ $ 120.000</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+			<div class="text-center">
+				<a href="/FindLand/list" class="btn btn-element w-30 fw-bold">Choose your land</a>
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+		<div class="container">
+			<h1>Testimonials</h1>
+			<div class="testimonialSection mb-5">
+
+
+				{% for testimonial in testimonials %}
+					<div class="card rounded m-auto my-4 " style="max-width: 800px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img class="avatar mt-3 ms-5" src="{{testimonial.avatar}}" alt="...">
+							</div>
+							<div class="col-md-8 col-sm-12">
+								<div class="card-body">
+									<h3 class="card-title">{{testimonial.name}}</h3>
+									<p class="card-text">{{testimonial.designation}}</p>
+									<p class="card-text">
+										<small class="text-muted">{{testimonial.location}}</small>
+									</p>
+									<p class="card-text">{{testimonial.message}}</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+</main>{% endblock %}
