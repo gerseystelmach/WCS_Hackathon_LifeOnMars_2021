@@ -25,7 +25,7 @@ class FindLandController extends AbstractController
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-            'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=' . APP_KEY
+            'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=5&api_key=' . APP_KEY
         );
         // TODO: change link to get more content
 
@@ -37,17 +37,6 @@ class FindLandController extends AbstractController
             $photos = $response->toArray();
             // convert the response (here in JSON) to an PHP array
         }
-
         return $this->twig->render('FindLand/index.html.twig', ['photos' => $photos['photos']]);
-    }
-
-    public function sqft(): int
-    {
-        return random_int(100, 1000);
-    }
-
-    public function price(): int
-    {
-        return $this->sqft() * 100;
     }
 }

@@ -1,3 +1,13 @@
 .h2 {
     color: var(--primary-color);
 }
+
+.btn {
+    background-color: var(--element-color);
+    border-color: var(--element-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
