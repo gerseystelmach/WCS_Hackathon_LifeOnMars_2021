@@ -1,0 +1,29 @@
+@import 'style.css';
+
+.navbar {
+    background-color: var(--primary-color);
+
+}
+
+.navbar-brand {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--secondary-color);
+    filter: brightness(120%);
+    letter-spacing: 4px;
+    padding: 20px;
+}
+
+
+
+.nav-link {
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.navbar-toggler {
+    border: none;
+}
