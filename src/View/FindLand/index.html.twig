@@ -1,10 +1,52 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/findland.css">
+{% endblock %}
+
+
 {% block content %}
 	<h1>Find Your Land !</h1>
 
-    <main>
-        
+    <main class= "container">
+        {#INSERT LOOP ON PLANS #}
+
+        {#}{% for photo in photos %}
+            <img src="{{photo.img_src}}" class="card-img-top" alt="...">
+        {% endfor %}
+
+        {% for plan in constant('App\\Controller\\FindLandController::PLANS') %}
+            <p>{{plan.price}}</p>
+        {% endfor %}#}
+
+
+        <div class = "card-group d-flex flex-column">
+            {% for plan in constant('App\\Controller\\FindLandController::PLANS') %}
+                <div class="card d-flex flex-row">
+
+                    {# change image source to photo from api #}
+                    <img src="{{photos.0.img_src}}" class="card-img-top" alt="mars">
+
+                    <div class>
+                        <div class="card-body">
+                            <h2 class="card-title">{{plan.name}}</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            {# ENDFOR #}
+            {% endfor %}
+        </div>
+
     </main>
 {% endblock %}
 
