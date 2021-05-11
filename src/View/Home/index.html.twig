@@ -22,7 +22,7 @@
 							</g>
 						</svg>
 					</a>
-                    <p>Scroll Down</p>
+					<p>Scroll Down</p>
 				</div>
 
 			</div>
@@ -31,16 +31,96 @@
 
 	</div>
 
-<section id="findyourland">
-<h1>Find your Land</h1>
-<div class="container">
-<div class="d-flex">
-
-</div>
-</div>
-</section>
+	<section id="findyourland">
+		<h1>Find your Land</h1>
+		<div class="container">
+			<div class="d-flex justify-content-lg-between flex-lg-row align-items-lg-center flex-column px-lg-5 mb-lg-5 mb-3">
 
 
+				<div class="card m-3">
+					<img class="card-img-top" src="{{nasaImages.60.img_src}}" alt="Card image cap">
+					<div class="card-body">
 
-</main>
-{% endblock %}
+						<p class="card-text">Good option for those who want to build a new family in Mars. Watch your kids born and grow in Mars!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Value land</li>
+						<li class="list-group-item">683m²</li>
+						<li class="list-group-item">Next to the NASA station</li>
+						<li class="list-group-item">$ 894.399,00</li>
+					</ul>
+
+				</div>
+
+				<div class="card m-3">
+					<img class="card-img-top h-50" src="{{nasaImages.10.img_src}}" alt="Card image cap">
+					<div class="card-body">
+
+						<p class="card-text">This is for those who want to live a luxury life in Mars. Discover the new Hamptons!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Luxury land</li>
+						<li class="list-group-item">2358m²</li>
+						<li class="list-group-item">Next to the future Mars's facility center</li>
+						<li class="list-group-item">$ 2.897.600,00</li>
+					</ul>
+
+				</div>
+
+				<div class="card  m-3">
+					<img class="card-img-top" src="{{nasaImages.150.img_src}}" alt="Card image cap">
+					<div class="card-body">
+
+						<p class="card-text">The best cost benefit for those who want to live in Mars with comfort! Come with all your close family!</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Comfort land</li>
+						<li class="list-group-item">1358m²</li>
+						<li class="list-group-item">Located in the first condominium of Mars</li>
+						<li class="list-group-item">$ 1.697.600,00</li>
+					</ul>
+
+				</div>
+
+			</div>
+			<div class="text-center">
+				<a href="#" class="btn btn-element w-30 fw-bold">Choose your land</a>
+			</div>
+		</div>
+
+	</section>
+
+	<section>
+		<div class="container">
+			<h1>Testimonials</h1>
+			<div class="testimonialSection d-flex align-items-center">
+
+
+				{% for testimonial in testimonials %}
+
+<div class="card testimonialCard" style="width: 50rem;">
+						<img src="{{testimonial.avatar}}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{testimonial.name}}</h5>
+
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">{{testimonial.designation}}</li>
+							<li class="list-group-item">{{testimonial.location}}</li>
+
+						</ul>
+						<div class="card-body">
+							<p>{{testimonial.message}}</p>
+						</div>
+					</div> 
+
+				{% endfor %}
+
+
+			</div>
+
+		</div>
+	</section>
+
+
+</main>{% endblock %}

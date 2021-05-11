@@ -30,6 +30,7 @@
     margin-bottom: 150px;
 }
 
+
 .scrollDown {
 
     margin-top: 100px;
@@ -39,4 +40,20 @@
 .scrollDown p {
     font-size: 1em;
     margin: 20px auto;
+}
+
+.btn-element {
+    background-color: var(--element-color);
+    color: var(--secondary-color);
+}
+
+.testimonialSection {
+
+    max-height: 800px;
+    background-color: var(--secondary-color);
+    overflow-y: scroll;
+}
+
+.testimonialCard p {
+    font-size: 1em;
 }
