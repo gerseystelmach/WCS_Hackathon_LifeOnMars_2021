@@ -3,7 +3,7 @@
 
 :root {
     --primary-color: #160401;
-    --primary-color-transparence: #1604018c;
+    --primary-color-transparence: #16040169;
     --secondary-color: #FFFDF1;
     --element-color: #FDA148;
     --white-color: #ffffff;
@@ -27,8 +27,8 @@ body {
 
 h1,
 h2 {
-    margin: 40px;
-    padding: 0;
+    margin: 60px auto;
+    padding: 20px;
     font-family: var(--title-font);
     text-transform: uppercase;
     letter-spacing: 4px;
