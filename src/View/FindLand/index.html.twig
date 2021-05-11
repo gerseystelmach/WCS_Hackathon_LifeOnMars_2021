@@ -1,10 +1,52 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/findland.css">
+{% endblock %}
+
+
 {% block content %}
 	<h1>Find Your Land !</h1>
 
-    <main>
-        
+    <main class= "container">
+        {#INSERT LOOP ON PLANS #}
+
+        {#}{% for photo in photos %}
+            <img src="{{photo.img_src}}" class="card-img-top" alt="...">
+        {% endfor %}
+
+        {% for plan in constant('App\\Controller\\FindLandController::PLANS') %}
+            <p>{{plan.price}}</p>
+        {% endfor %}#}
+
+        {#}{% for i in 0..10 %}
+            {{i}}
+        {% endfor %}#}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for photo in photos %}
+        <div class="col">
+            <div class="card d-flex flex-row">
+                <img src="{{photo.img_src}}" class="card-img-top ratio ratio-1x1" alt="plot of land">
+
+
+                <div class="card-body">
+                    <p class="card-title">REF:{{photo.id}}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Sqft:
+                        </li>
+                        <li class="list-group-item">Price: £</li>
+                        <li class="list-group-item">Region: </li>
+
+                    </ul>
+                    <a class="btn btn-primary" href="#" role="button">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
     </main>
 {% endblock %}
 
