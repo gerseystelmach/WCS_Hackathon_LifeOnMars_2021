@@ -1,4 +1,8 @@
-.h2 {
+p {
+    color: var(--secondary-color);
+}
+
+.card-title{
     color: var(--primary-color);
 }
 
