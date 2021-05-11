@@ -25,8 +25,7 @@ class FindLandController extends AbstractController
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-            'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/
-            photos?earth_date=2015-6-3&api_key=fCbxdWNJdALLYRWlUNBwtX3IX1WCgxWMIUeItcHY'
+            'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=' . APP_KEY
         );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
