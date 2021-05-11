@@ -22,7 +22,7 @@
 							</g>
 						</svg>
 					</a>
-					<p>Scroll Down</p>
+					<p class="scrollTitle">Scroll Down</p>
 				</div>
 
 			</div>
@@ -44,10 +44,9 @@
 						<p class="card-text">Good option for those who want to build a new family in Mars. Watch your kids born and grow in Mars!</p>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Value land</li>
-						<li class="list-group-item">683m²</li>
-						<li class="list-group-item">Next to the NASA station</li>
-						<li class="list-group-item">$ 894.399,00</li>
+						<li class="list-group-item valueLabel fw-bold">Value land</li>
+						<li class="list-group-item">less than 300 sqfts</li>
+						<li class="list-group-item">less than $45.000</li>
 					</ul>
 
 				</div>
@@ -59,10 +58,11 @@
 						<p class="card-text">This is for those who want to live a luxury life in Mars. Discover the new Hamptons!</p>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Luxury land</li>
-						<li class="list-group-item">2358m²</li>
-						<li class="list-group-item">Next to the future Mars's facility center</li>
-						<li class="list-group-item">$ 2.897.600,00</li>
+						<li class="list-group-item luxuryLabel fw-bold">
+							Luxury land</li>
+						<li class="list-group-item">more than 800 sqft</li>
+
+						<li class="list-group-item ">starting from $120.000</li>
 					</ul>
 
 				</div>
@@ -74,10 +74,11 @@
 						<p class="card-text">The best cost benefit for those who want to live in Mars with comfort! Come with all your close family!</p>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Comfort land</li>
-						<li class="list-group-item">1358m²</li>
-						<li class="list-group-item">Located in the first condominium of Mars</li>
-						<li class="list-group-item">$ 1.697.600,00</li>
+						<li class="list-group-item comfortLabel fw-bold">Comfort land</li>
+						<li class="list-group-item">300 sqft ~ 800 sqft</li>
+
+						<li class="list-group-item ">$ 45.000 ~ $ 120.000</li>
+
 					</ul>
 
 				</div>
@@ -93,34 +94,34 @@
 	<section>
 		<div class="container">
 			<h1>Testimonials</h1>
-			<div class="testimonialSection d-flex align-items-center">
+			<div class="testimonialSection ">
 
 
 				{% for testimonial in testimonials %}
+					<div class="card rounded m-auto my-4" style="max-width: 800px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img class="avatar mt-3 ms-5" src="{{testimonial.avatar}}" alt="...">
+							</div>
+							<div class="col-md-8 col-sm-12">
+								<div class="card-body">
+									<h3 class="card-title">{{testimonial.name}}</h3>
+									<p class="card-text">{{testimonial.designation}}</p>
+									<p class="card-text">
+										<small class="text-muted">{{testimonial.location}}</small>
+									</p>
+									<p class="card-text">{{testimonial.message}}</p>
 
-<div class="card testimonialCard" style="width: 50rem;">
-						<img src="{{testimonial.avatar}}" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">{{testimonial.name}}</h5>
-
+								</div>
+							</div>
 						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">{{testimonial.designation}}</li>
-							<li class="list-group-item">{{testimonial.location}}</li>
-
-						</ul>
-						<div class="card-body">
-							<p>{{testimonial.message}}</p>
-						</div>
-					</div> 
-
+					</div>
 				{% endfor %}
 
-
 			</div>
-
 		</div>
-	</section>
 
+	</div>
+</section>
 
 </main>{% endblock %}

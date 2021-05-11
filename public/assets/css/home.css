@@ -37,10 +37,14 @@
 
 }
 
-.scrollDown p {
+
+.scrollTitle {
     font-size: 1em;
     margin: 20px auto;
 }
+
+
+
 
 .btn-element {
     background-color: var(--element-color);
@@ -49,11 +53,31 @@
 
 .testimonialSection {
 
-    max-height: 800px;
+    max-height: 600px;
     background-color: var(--secondary-color);
     overflow-y: scroll;
 }
 
-.testimonialCard p {
+.testimonialSection p {
     font-size: 1em;
+}
+
+.comfortLabel {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.luxuryLabel {
+    background-color: var(--element-color);
+    color: var(--secondary-color);
+}
+
+.valueLabel {
+    background-color: var(--green-color);
+    color: var(--secondary-color);
+}
+
+.avatar {
+    border-radius: 100px;
+
 }
