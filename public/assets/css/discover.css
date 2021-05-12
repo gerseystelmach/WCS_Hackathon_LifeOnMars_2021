@@ -25,3 +25,13 @@ p {
 .weather {
     background-color: var(--primary-color) !important;
 }
+
+img {
+    max-height: 700px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
