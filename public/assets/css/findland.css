@@ -10,6 +10,10 @@
     cursor: default;
 }
 
+.contact-us{
+    cursor: pointer;
+}
+
 .btn-comfort, .btn-comfort:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
