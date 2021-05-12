@@ -12,9 +12,12 @@
     object-fit: cover;
 }
 
-h5{
-    font-size:30px;
+h3{
     color: var(--element-color);
+}
+
+h4{
+    font-size:30px;
 }
 
 p{
