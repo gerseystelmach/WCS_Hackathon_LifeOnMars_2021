@@ -1,15 +1,14 @@
-
-.container h1{
-    margin-top:100px;
+.container h1 {
+    margin-top: 100px;
 }
 
-.latest_news h2 h3{
+.latest_news h2 h3 {
     color: var(--secondary-color);
     font-family: var(--title-font);
     margin-top: 300px;
 }
 
-.card_discover{
+.card_discover {
     background-color: var(--secondary-color);
     text-align: center;
 }
@@ -24,7 +23,10 @@ p {
     background-size: cover;
 }
 
-.planet_mars p{
+.planet_mars p {
     color: var(--secondary-color);
 }
 
+.weather {
+    background-color: var(--primary-color) !important;
+}

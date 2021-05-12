@@ -44,6 +44,10 @@
 }
 
 
+.cardStyle {
+    height: 600px;
+
+}
 
 
 .btn-element {
@@ -54,8 +58,10 @@
 .testimonialSection {
 
     max-height: 600px;
-    background-color: var(--secondary-color);
+    background-color: var(--element-color);
     overflow-y: scroll;
+    margin: auto;
+    width: 80%;
 }
 
 .testimonialSection p {
