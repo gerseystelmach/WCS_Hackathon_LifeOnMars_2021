@@ -7,12 +7,13 @@
 
 {% block content %}
 	
-    <main class= "container">
-       <h1 class="mt-5">Find Your Land</h1>
 
+    <main class= "container my-5">
+    <h1>Find Your Land</h1>
         <div class="d-flex flex-column align-items-center mb-5">
             <p class = "mb-5 text-center intro" >Please find below our lovely selection of land plots for your happy future on Mars! Browse and let us kow which one you fancy.</p>
-            <a class="btn btn-luxury contact-us text-light fw-bold" href="/Contact/index" role="button">Contact Us</a>
+           
+
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-group">
             {% for photo in photos %}
@@ -27,14 +28,21 @@
                                 <li class="list-group-item">Size: {{size}} sqft</li>
                                 {% set price = (size*150)|number_format() %}
                                 <li class="list-group-item">Price: {{price}} £</li>
-                                <li class="list-group-item row">Region: {{random(['North','South', 'East', 'West'])}}</li>
-                                <li class="list-group-item">
+
+                                <li class="list-group-item">Region: {{random(['North','South', 'East', 'West'])}}</li>
+                              
                                     {% if size <= 300 %}
-                                        <li class="btn btn-success fw-bold">Value land</li>
+                                        <li class="list-group-item valueLabel fw-bold">Value land</li>
+                                        <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
                                     {% elseif size > 300 and size <= 800 %}
-                                        <li class="btn btn-comfort fw-bold row" href="#" role="button">Comfort land</li>
+                                        <li class="list-group-item comfortLabel fw-bold">Comfort land</li>
+                                       
+                                          <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
                                     {% else %}
-                                        <li class="btn btn-luxury text-light fw-bold row" href="#" role="button">Luxury land</li>
+                                        <li class="list-group-item luxuryLabel fw-bold">Luxury land</li>
+                                        <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
+
+             
                                     {% endif %}
                                 </li>
                             </ul>

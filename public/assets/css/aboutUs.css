@@ -1,30 +1,36 @@
-.aboutUs{
+.aboutUs {
     margin-top: 100px;
 }
 
-.bg-darkbrown{
+.bg-darkbrown {
     background-color: var(--primary);
 }
 
-.carousel-photo img{
-    max-width:100%;
-    height:500px;
+.carousel-photo img {
+    max-width: 100%;
+    height: 500px;
     object-fit: cover;
 }
 
-h3{
+h3 {
     color: var(--element-color);
 }
 
-h4{
-    font-size:30px;
+h4 {
+    font-size: 30px;
 }
 
-p{
+p {
     color: var(--white-color);
 
 }
 
-.error{
-    color:var(--element-color);
+.roboImg {
+    transition: transform .2s;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.roboImg:hover {
+    transform: scale(1.1);
 }
