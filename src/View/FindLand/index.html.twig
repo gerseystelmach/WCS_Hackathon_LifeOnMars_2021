@@ -8,51 +8,47 @@
 {% block content %}
 	<h1>Find Your Land !</h1>
 
-	<main class="container">
-		<div class="d-flex flex-column align-items-center mb-5">
-			<p class="mb-5 text-center">Please find below our lovely selection of land plots for your happy future on Mars! Browse and let us kow which one you fancy.</p>
-			<a class="btn btn-luxury" href="Contact/index" role="button">Contact Us</a>
-		</div>
+    <main class= "container mb-5">
+        <div class="d-flex flex-column align-items-center mb-5">
+            <p class = "mb-5 text-center intro" >Please find below our lovely selection of land plots for your happy future on Mars! Browse and let us kow which one you fancy.</p>
+            <a class="btn btn-luxury" href="/Contact/index" role="button">Contact Us</a>
+        </div>
 
 
-		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-group">
-			{% for photo in photos %}
-				<div class="col">
-					<div class="card d-flex flex-row">
-						<img src="{{photo.img_src}}" class="card-img-top ratio ratio-1x1 w-50" alt="plot of land">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-group">
+            {% for photo in photos %}
+                <div class="col">
+                    <div class="card d-flex flex-row">
+                        <img src="{{photo.img_src}}" class="card-img-top ratio ratio-1x1 w-50" alt="plot of land">
 
-						<div class="card-body">
-							<p class="card-title">REF:{{photo.id}}</p>
-							<ul class="list-group list-group-flush">
-								{% set size = random(100, 1000)%}
-								<li class="list-group-item">Size:
-									{{size}}
-									sqft</li>
-								{% set price = (size*150)|number_format() %}
-								<li class="list-group-item">Price:
-									{{price}}
-									£</li>
-								<li class="list-group-item">Region:
-									{{random(['North','South', 'East', 'West'])}}</li>
-								<li class="list-group-item">
-									{% if size <= 300 %}
-										<li class="btn btn-success">Value land</li>
-									{% elseif size > 300 and size <= 800 %}
-										<li class="btn btn-comfort" href="#" role="button">Comfort land</li>
-									{% else %}
-										<li class="btn btn-luxury" href="#" role="button">Luxury land</li>
-									{% endif %}
-								</li>
+                        <div class="card-body">
+                            <p class="card-title">REF:{{photo.id}}</p>
+                            <ul class="list-group list-group-flush">
+                                {% set size = random(100, 1000)%}
+                                <li class="list-group-item">Size: {{size}} sqft</li>
+                                {% set price = (size*150)|number_format() %}
+                                <li class="list-group-item">Price: {{price}} £</li>
+                                <li class="list-group-item">Region: {{random(['North','South', 'East', 'West'])}}</li>
+                                <li class="list-group-item">
+                                    {% if size <= 300 %}
+                                        <li class="btn btn-success">Value land</li>
+                                    {% elseif size > 300 and size <= 800 %}
+                                        <li class="btn btn-comfort" href="#" role="button">Comfort land</li>
+                                    {% else %}
+                                        <li class="btn btn-luxury" href="#" role="button">Luxury land</li>
+                                    {% endif %}
+                                </li>
 
 
-							</ul>
+                            </ul>
 
 
-						</div>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 
-	</main>
+    </main>
 {% endblock %}
