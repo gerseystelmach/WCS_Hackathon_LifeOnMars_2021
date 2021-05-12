@@ -7,22 +7,22 @@
 }
 
 .btn{
-    cursor: pointer;
+    cursor: default;
 }
 
 .btn-comfort, .btn-comfort:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color:  var(--secondary-color);
-    cursor: pointer;
+    cursor: default;
 }
 
 .btn-success{
-    cursor: pointer;
+    cursor: default;
 }
 
 .btn-luxury{
     background-color: var(--element-color);
     border-color: var(--element-color);
-    cursor: pointer;
+    cursor: default;
 }
