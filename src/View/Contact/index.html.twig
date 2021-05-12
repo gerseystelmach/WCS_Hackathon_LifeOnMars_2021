@@ -1,0 +1,69 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid contact-photo p-0">
+        <img src="../assets/images/robot.jpeg" alt="mars">
+</div>
+<section class="contactUs container my-5">
+
+    <h2 class="text-center mb-3">
+        CONTACT US
+    </h2>
+
+    {# Show the errors #}
+    {% if errors is not empty %}
+    <ul class="error alert container text-center">
+        {% for error in errors %}
+        <li class="list-unstyled"> {{ error }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {# Showing the errors ends here #}
+
+    <form method="post" action="" novalidate>
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="firstname">First name</label>
+            <div class="col-md-9 col-12">
+                <input class="form-control " type="text" id="firstname" name="firstname" placeholder="Your first name"
+                    value="{{ client.firstname }}" required />
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="lastname">Last name</label>
+            <div class="col-md-9 col-12">
+                <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Your last name"
+                    value="{{ client.lastname }}" required />
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label for="email" class="col-md-3 col-12 col-form-label text-light">Email</label>
+            <div class="col-md-9 col-12">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                    value="{{ client.email }}" required />
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label text-light" for="message">Message</label>
+            <div class="col-md-9 col-12">
+                <textarea class="form-control" id="message" rows="5" name="message"
+                    placeholder="Write your message here" required>{{ client.message }}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-12 col-form-label"></label>
+            <div class="col-md-9 col-12">
+                <button type="submit" class="btn text-dark bg-light col-md-2 col-4">
+                    Send
+                </button>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
