@@ -15,11 +15,11 @@
 			</p>
 		</section>
 		<section class="latest_news">
-			<h2>Lastet News</h2>
+			<h2>Latest News</h2>
 			<div class="d-flex justify-content-around">
-				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 card-group">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
 					{% for new in news %}
-						<div class="col">
+						<div class="col card-group">
 							<div class="card">
 								<div class="card_discover">
 									<img class="card-img-top" src="{{new.imageUrl}}" width="400px" height="300px" alt="news on mars">
