@@ -13,7 +13,7 @@ class DiscoverController extends AbstractController
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-            'https://test.spaceflightnewsapi.net/api/v2/articles'
+            'https://test.spaceflightnewsapi.net/api/v2/articles?_limit=9'
         );
         // TODO: change link to get more content
 
