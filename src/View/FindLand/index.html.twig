@@ -6,12 +6,13 @@
 
 
 {% block content %}
-	<h1>Find Your Land !</h1>
+	
 
-    <main class= "container mb-5">
+    <main class= "container my-5">
+    <h1>Find Your Land</h1>
         <div class="d-flex flex-column align-items-center mb-5">
             <p class = "mb-5 text-center intro" >Please find below our lovely selection of land plots for your happy future on Mars! Browse and let us kow which one you fancy.</p>
-            <a class="btn btn-luxury contact-us" href="/Contact/index" role="button">Contact Us</a>
+           
         </div>
 
 
@@ -29,13 +30,17 @@
                                 {% set price = (size*150)|number_format() %}
                                 <li class="list-group-item">Price: {{price}} £</li>
                                 <li class="list-group-item">Region: {{random(['North','South', 'East', 'West'])}}</li>
-                                <li class="list-group-item">
+                              
                                     {% if size <= 300 %}
-                                        <li class="btn btn-success">Value land</li>
+                                        <li class="list-group-item valueLabel fw-bold">Value land</li>
+                                        <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
                                     {% elseif size > 300 and size <= 800 %}
-                                        <li class="btn btn-comfort" href="#" role="button">Comfort land</li>
+                                        <li class="list-group-item comfortLabel fw-bold">Comfort land</li>
+                                       
+                                          <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
                                     {% else %}
-                                        <li class="btn btn-luxury" href="#" role="button">Luxury land</li>
+                                        <li class="list-group-item luxuryLabel fw-bold">Luxury land</li>
+                                        <a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
                                     {% endif %}
                                 </li>
 

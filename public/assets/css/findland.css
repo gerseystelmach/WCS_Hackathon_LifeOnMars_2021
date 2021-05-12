@@ -2,35 +2,56 @@
     color: var(--secondary-color);
 }
 
-.card-title{
+.card-title {
     color: var(--primary-color);
 }
 
-.btn{
-    cursor: default;
-}
-
-.contact-us{
+.btn {
     cursor: pointer;
 }
 
-.btn-comfort, .btn-comfort:hover {
+.contact-us {
+    cursor: pointer;
+}
+
+.btn-comfort,
+.btn-comfort:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
     cursor: default;
 }
 
-.btn-success{
+.btn-success {
     cursor: default;
 }
 
-.btn-luxury{
+.btn-luxury {
     background-color: var(--element-color);
     border-color: var(--element-color);
     cursor: default;
 }
 
-.contact-us{
+.contact-us {
     cursor: pointer;
+}
+
+.comfortLabel {
+
+    color: var(--primary-color);
+}
+
+.luxuryLabel {
+
+    color: var(--element-color);
+}
+
+.valueLabel {
+
+    color: var(--green-color);
+}
+
+.btnReserve {
+
+    border-radius: 100px;
 }
