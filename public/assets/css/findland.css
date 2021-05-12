@@ -28,8 +28,8 @@
 
 .btn-luxury {
     background-color: var(--element-color);
-    border-color: var(--element-color);
-    cursor: default;
+    color: var(--secondary-color);
+
 }
 
 .contact-us {

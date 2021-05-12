@@ -24,7 +24,9 @@ class ContactController extends AbstractController
 
     public function index()
     {
+
         $errors = $client = [];
+        $get = '';
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $client = array_map('trim', $_POST);
             $errors =  $this->validateForm($client, $errors);
@@ -32,9 +34,13 @@ class ContactController extends AbstractController
                 header('Location: /contact/index');
             }
         }
+        if (!empty($_GET)) {
+            $get = $_GET['id'];
+        }
         return $this->twig->render('Contact/index.html.twig', [
             'errors' => $errors,
             'client' => $client,
+            'get' => $get,
         ]);
     }
 

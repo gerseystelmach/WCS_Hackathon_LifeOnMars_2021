@@ -22,7 +22,7 @@
 							<img src="{{photo.img_src}}" class="card-img-top ratio ratio-1x1 w-50" alt="plot of land">
 
 							<div class="card-body">
-								<p class="card-title">REF:{{photo.id}}</p>
+								<p class="card-title ms-3">REF: {{photo.id}}</p>
 								<ul class="list-group list-group-flush">
 									{% set size = random(100, 1000)%}
 									<li class="list-group-item">Size:
@@ -38,14 +38,14 @@
 
 									{% if size <= 300 %}
 										<li class="list-group-item valueLabel fw-bold">Value land</li>
-										<a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
+										<a class="my-3 btn btn-luxury rounded btnReserve fw-bold" href="/Contact/index/?id={{photo.id}}">Reserve now</a>
 									{% elseif size > 300 and size <= 800 %}
 										<li class="list-group-item comfortLabel fw-bold">Comfort land</li>
 
-										<a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a>
+										<a class="my-3 btn btn-luxury rounded btnReserve fw-bold" href="/Contact/index/?id={{photo.id}}">Reserve now</a>
 									{% else %}
 										<li class="list-group-item luxuryLabel fw-bold">Luxury land</li>
-										<a class="my-3 btn btn-secondary rounded btnReserve fw-bold" href="">Reserve now</a></li>
+										<a class="my-3 btn btn-luxury rounded btnReserve fw-bold" href="/Contact/index/?id={{photo.id}}">Reserve now</a></li>
 									{% endif %}
 								
 							</ul>

@@ -1,69 +1,73 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="/assets/css/contact.css">
+	<link rel="stylesheet" href="/assets/css/contact.css">
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid contact-photo p-0">
-        <img src="../assets/images/robot.jpeg" alt="mars">
-</div>
-<section class="contactUs container my-5">
+	<div class="container-fluid contact-photo p-0">
+		<img src="../assets/images/robot.jpeg" alt="mars">
+	</div>
+	<section class="contactUs container my-5">
 
-    <h1 class="text-center my-5">
-        CONTACT US
-    </h1>
+		<h1 class="text-center my-5">
+			CONTACT US
+		</h1>
 
-    {# Show the errors #}
-    {% if errors is not empty %}
-    <ul class="error container-form  text-center" role="alert">
-        {% for error in errors %}
-        <li class="list-unstyled alert alert-danger text-center"> {{ error }} </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {# Showing the errors ends here #}
+		{# Show the errors #}
+		{% if errors is not empty %}
+			<ul class="error container-form  text-center" role="alert">
+				{% for error in errors %}
+					<li class="list-unstyled alert alert-danger text-center">
+						{{ error }}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		{# Showing the errors ends here #}
 
-    <form method="post" action="" novalidate class="container-form">
-        <div class="form-group row mb-3">
-            <label class="form-label text-light" for="firstname">First name</label>
-            
-                <input class="form-control " type="text" id="firstname" name="firstname" placeholder="Your first name"
-                    value="{{ client.firstname }}" required />
-            
-        </div>
+		<form method="post" action="" novalidate class="container-form">
+			<div class="form-group row mb-3">
+				<label class="form-label text-light" for="firstname">First name</label>
 
-        <div class="form-group row mb-3">
-            <label class="form-label text-light" for="lastname">Last name</label>
-           
-                <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Your last name"
-                    value="{{ client.lastname }}" required />
-            
-        </div>
+				<input class="form-control " type="text" id="firstname" name="firstname" placeholder="Percy" value="{{ client.firstname }}" required/>
 
-        <div class="form-group row mb-3">
-            <label class="form-label text-light" for="email">Email</label>
-            
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
-                    value="{{ client.email }}" required />
-           
-        </div>
-        <div class="form-group row mb-3">
-            <label class="form-label text-light" for="message">Message</label>
-            
-                <textarea class="form-control" id="message" rows="5" name="message"
-                    placeholder="Write your message here" required>{{ client.message }}</textarea>
-           
-        </div>
+			</div>
 
-        <div class="form-group row mb-3 text-center">
-           
-            
-                <button type="submit" class="btn text-light my-5 fw-bold" >
-                    Send
-                </button>
-           
-        </div>
-    </form>
-</section>
+			<div class="form-group row mb-3">
+				<label class="form-label text-light" for="lastname">Last name</label>
+
+				<input class="form-control" type="text" id="lastname" name="lastname" placeholder="Smith" value="{{ client.lastname }}" required/>
+
+			</div>
+
+			<div class="form-group row mb-3">
+				<label class="form-label text-light" for="email">Email</label>
+
+				<input type="email" class="form-control" id="email" name="email" placeholder="percysmith@mars.com" value="{{ client.email }}" required/>
+
+			</div>
+            	<div class="form-group row mb-3">
+				<label class="form-label text-light" for="email">Land Reference</label>
+
+				<input type="text" class="form-control" id="ref" name="ref" placeholder="Ex: 412345" value="{{ get }}"/>
+
+			</div>
+			<div class="form-group row mb-3">
+				<label class="form-label text-light" for="message">Message</label>
+
+				<textarea class="form-control" id="message" rows="5" name="message" placeholder="Write your message here" required>{{ client.message }}</textarea>
+
+			</div>
+
+			<div class="form-group row mb-3 text-center">
+
+
+				<button type="submit" class="btn text-light my-5 fw-bold">
+					Send
+				</button>
+
+			</div>
+		</form>
+	</section>
 {% endblock %}
