@@ -26,3 +26,7 @@
     border-color: var(--element-color);
     cursor: default;
 }
+
+.contact-us{
+    cursor: pointer;
+}
