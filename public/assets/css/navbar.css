@@ -10,17 +10,18 @@
     text-transform: uppercase;
     font-weight: 900;
     color: var(--secondary-color);
-    filter: brightness(120%);
+
     letter-spacing: 4px;
-    padding: 20px;
+    padding: 15px;
 }
 
 
 
 .nav-link {
-    font-family: var(--title-font);
+    font-family: var(--text-font);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
+
     color: var(--secondary-color);
 }
 
