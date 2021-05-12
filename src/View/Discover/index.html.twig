@@ -6,37 +6,36 @@
 
 
 {% block content %}
-	<section class="container-fluid planet_mars d-flex flex-column">
+	<section class="container-fluid  planet_mars d-flex flex-column">
 		<h1>DISCOVER MARS</h1>
-		<img src="https://cdn.pixabay.com/photo/2014/12/17/20/43/red-planet-571902_960_720.jpg" alt="planet_mars">
+		<img src="/assets/images/mars.png" alt="planet_mars">
 		<p class="my-5 text-justify">The planet Mars is the best place to live your second life. The average temperature on Mars is minus 80 degrees Fahrenheit -- way below freezing!
-						Mars is rocky with canyons, volcanoes and craters all over it. Red dust covers almost all of Mars. It has clouds and wind, just as Earth does. Sometimes the wind blows the red dust into a dust storm. Tiny dust storms can look like tornados, and large ones can cover the whole planet!</p>
+									Mars is rocky with canyons, volcanoes and craters all over it. Red dust covers almost all of Mars. It has clouds and wind, just as Earth does. Sometimes the wind blows the red dust into a dust storm. Tiny dust storms can look like tornados, and large ones can cover the whole planet!</p>
 	</section>
-	<section class="d-flex flex-column align-items-center mb-5">
+	<section class="container d-flex flex-column align-items-center mb-5">
 		<h2>Weather</h2>
 		<iframe class="text-center w-100" src='https://mars.nasa.gov/layout/embed/image/insightweather/' width='800' height='530' scrolling='no' frameborder='0'></iframe>
 	</section>
-	<section class="latest_news">
+	<section class="container latest_news">
 		<h2>Latest News</h2>
 		<div class="d-flex justify-content-around">
 			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
 				{% for new in news %}
-					<div class="col card-group">
+
+					<div class="card-group">
 						<div class="card">
-							<div class="card_discover">
-								<img class="card-img-top" src="{{new.imageUrl}}" width="400px" height="300px" alt="news on mars">
-								<div class="card-body">
-									<h3 class="card-title">{{new.title}}</h3>
-									<p class="card-text">{{new.summary}}</p>
-									<p class="card-footer">
-										<small class="text-muted">published at :
-											{{new.publishedAt|date("m/d/Y")}}</small>
-									</p>
-								</div>
+							<img src="{{new.imageUrl}}" class="card-img-top" alt="">
+							<div class="card-body">
+								<h5 class="card-title">{{new.title}}</h5>
+								<p class="card-text">{{new.summary}}</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">published at: {{new.publishedAt|date("m/d/Y")}}</small>
 							</div>
 						</div>
 					</div>
-				{% endfor %}
-			</div>
-		</section>
-	{% endblock %}
+
+					{% endfor %}
+				</div>
+			</section>
+		{% endblock %}

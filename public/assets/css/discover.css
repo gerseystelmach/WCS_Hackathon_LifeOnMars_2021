@@ -18,11 +18,6 @@ p {
     font-size: var(--paragraph-size);
 }
 
-.planet_mars img{
-    /* border: 8px solid var(--element-color); */
-    background-size: cover;
-}
-
 .planet_mars p {
     color: var(--secondary-color);
 }
