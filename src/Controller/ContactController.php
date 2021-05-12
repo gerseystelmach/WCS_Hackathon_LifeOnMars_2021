@@ -31,7 +31,7 @@ class ContactController extends AbstractController
             $client = array_map('trim', $_POST);
             $errors =  $this->validateForm($client, $errors);
             if (empty($errors)) {
-                header('Location: /contact/index');
+                //header('Location: /contact/index');
             }
         }
         if (!empty($_GET)) {

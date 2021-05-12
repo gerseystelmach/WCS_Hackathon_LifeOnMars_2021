@@ -18,7 +18,13 @@
 		</h1>
 
 		{# Show the errors #}
-		{% if errors is not empty %}
+
+		{% if errors is empty and client is not empty  %}
+		<p class="container-form success text-center text-light alert bg-success mb-5">
+			Thank you {{ client.firstname }} {{ client.lastname }} for your message. We will contact you as soon as possible.
+		</p>
+		
+			{% else %}
 			<ul class="error container-form  text-center" role="alert">
 				{% for error in errors %}
 					<li class="list-unstyled alert alert-danger text-center">
@@ -26,7 +32,10 @@
 					</li>
 				{% endfor %}
 			</ul>
+			
+
 		{% endif %}
+		
 		{# Showing the errors ends here #}
 
 		<form method="post" action="" novalidate class="container-form">
@@ -72,5 +81,6 @@
 
 			</div>
 		</form>
+		
 	</section>
 {% endblock %}

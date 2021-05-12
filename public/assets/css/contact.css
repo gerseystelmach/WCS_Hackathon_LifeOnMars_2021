@@ -19,7 +19,7 @@ label{
     margin:0 auto; 
 }
 
-.error{
+.error, .success{
     width:60%;
     color:var(--element-color);
 }
